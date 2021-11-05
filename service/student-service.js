@@ -9,7 +9,6 @@ module.exports.createStudent = async (serviceData) => {
     let result = await student.save();
     return formatMongoData(result);
   } catch (error) {
-    console.log("Some  thing went wrong: Servie Create Student", error);
     throw new Error(error);
   }
 };
@@ -19,7 +18,6 @@ module.exports.getAllStudents = async () => {
     let student = await Student.find({});
     return formatMongoData(student);
   } catch (error) {
-    console.log("Some  thing went wrong: Get All Student", error);
     throw new Error(error);
   }
 };
@@ -33,7 +31,6 @@ module.exports.getStudentById = async ({ id }) => {
     }
     return formatMongoData(student);
   } catch (error) {
-    console.log("Some  thing went wrong: Get Student by Id ", error);
     throw new Error(error);
   }
 };
@@ -49,7 +46,6 @@ module.exports.updateStudent = async ({ id, updateInfo }) => {
     }
     return formatMongoData(student);
   } catch (error) {
-    console.log("Some  thing went wrong: Get Student by Id ", error);
     throw new Error(error);
   }
 };
@@ -63,7 +59,6 @@ module.exports.deleteStudent = async ({ id }) => {
     }
     return formatMongoData(student);
   } catch (error) {
-    console.log("Some  thing went wrong: Get Student by Id ", error);
     throw new Error(error);
   }
 };

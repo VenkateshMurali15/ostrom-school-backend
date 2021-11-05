@@ -2,8 +2,7 @@ const constants = require("../constants");
 const mongoose = require("mongoose");
 
 module.exports.formatMongoData = (data) => {
-  console.log(Array.isArray(data), "isArray");
-  if (Array.isArray(data)) {
+    if (Array.isArray(data)) {
     let newDataList = [];
     for (value of data) {
       newDataList.push(value.toObject());

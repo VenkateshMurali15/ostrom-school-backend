@@ -11,7 +11,7 @@ const validateObjectSchema = (data, schema) => {
         path: value.path,
       };
     });
-    console.log("Joi Validation Message", errorDetails);
+   
     return errorDetails;
   }
   return null;

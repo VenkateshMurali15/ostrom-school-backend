@@ -9,7 +9,7 @@ module.exports.createStudent = async (req, res) => {
     response.message = constants.studentMessage.STUDENT_CREATED;
     response.body = responseFromService;
   } catch {
-    console.log("Something went Wrong: Controller Student", error);
+   
     response.message = error.message;
   }
   return res.status(response.status).send(response);
@@ -23,7 +23,7 @@ module.exports.getAllStudents = async (req, res) => {
     response.message = constants.studentMessage.STUDENT_FETCHED;
     response.body = responseFromService;
   } catch {
-    console.log("Something went Wrong: Controller Student", error);
+  
     response.message = error.message;
   }
   return res.status(response.status).send(response);
@@ -37,7 +37,7 @@ module.exports.getStudentById = async (req, res) => {
     response.message = constants.studentMessage.STUDENT_FETCHED;
     response.body = responseFromService;
   } catch {
-    console.log("Something went Wrong:Get by ID", error);
+   
     response.message = error.message;
   }
   return res.status(response.status).send(response);
@@ -54,7 +54,7 @@ module.exports.updateStudent = async (req, res) => {
     response.message = constants.studentMessage.STUDENT_FETCHED;
     response.body = responseFromService;
   } catch {
-    console.log("Something went Wrong:Get by ID", error);
+  
     response.message = error.message;
   }
   return res.status(response.status).send(response);
@@ -68,7 +68,7 @@ module.exports.deleteStudent = async (req, res) => {
     response.message = constants.studentMessage.STUDENT_DELETED;
     response.body = responseFromService;
   } catch {
-    console.log("Something went Wrong:Get by ID", error);
+   
     response.message = error.message;
   }
   return res.status(response.status).send(response);
